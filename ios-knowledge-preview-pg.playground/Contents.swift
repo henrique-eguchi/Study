@@ -4,7 +4,7 @@ import UIKit
 
 /// Class is `reference type` - you send a reference when it gets passed around
 /// Analogy - It is like changing a shared Google Sheet with others.
-/// Usage: When you do got behavior: logic, use cases...
+/// Usage: When you do got behavior: logic, use cases... or need inheritance
 final class Car {
     var year: Int
     var make: String
@@ -30,7 +30,7 @@ print("-------------")
 /// Struct is `value type` - you copy the object when it gets passed around
 /// Analogy - It is like creating a copy of a sheet by downloading it and change it locally.
 /// Structs has member-wise initialization which means there's no need for having constructor since you got one for free.
-/// Usage: Aim to create structs for pure data, immutable, and no-behavior, SwiftUI views
+/// Usage: Aim to create structs for pure data, immutable, and no-behavior, SwiftUI views - Structs are lightweight & performant
 struct SecondCar {
     var year: Int
     var make: String
@@ -49,3 +49,46 @@ print(secondStolenCar.color) // Copied car is "Black"
 
 // MARK: - Actors
 // Usage: Use actors when you need to ensure a component is thread-safe and you’re happy with the extra async/await complexity.
+// TBA
+
+
+// MARK: - Generics
+
+
+// MARK: - Closure
+
+
+// MARK: - Filter, Map, Reduce
+
+
+// MARK: - Data Structures: Array & Set
+
+
+// MARK: - Unwrapping Optionals
+
+
+// MARK: - ARC & Retain Cycles
+
+
+// MARK: - Concurrency & Threading
+
+
+// MARK: - Generics
+
+
+// MARK: - Network calls
+
+
+// MARK: - Singleton
+
+
+// MARK: - Dependency Injection
+
+
+// MARK: - Delegates & Protocols
+
+
+// MARK: - View lifecycle (UIKit)
+
+
+
