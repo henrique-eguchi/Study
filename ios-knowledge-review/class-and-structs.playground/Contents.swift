@@ -55,9 +55,6 @@ print(secondStolenCar.color) // Copied car is "Black"
 // MARK: - Generics
 
 
-// MARK: - Closure
-
-
 // MARK: - Filter, Map, Reduce
 
 
