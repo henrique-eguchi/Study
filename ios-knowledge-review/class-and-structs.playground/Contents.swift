@@ -4,7 +4,7 @@ import UIKit
 
 /// Class is `reference type` - you send a reference when it gets passed around
 /// Analogy - It is like changing a shared Google Sheet with others.
-/// Usage: When you do got behavior: logic, use cases... or need inheritance
+/// Usage: When you do got behavior: logic, use cases, need inheritance...
 final class Car {
     var year: Int
     var make: String
@@ -46,10 +46,52 @@ secondStolenCar.color = "Black"
 print(mySecondCar.color) // Still "Orange"
 print(secondStolenCar.color) // Copied car is "Black"
 
+print("-------------")
+
 
 // MARK: - Actors
-// Usage: Use actors when you need to ensure a component is thread-safe and you’re happy with the extra async/await complexity.
-// TBA
+
+/// Actor is a `reference type` with concurrency support, ensuring thread safety.
+/// Analogy - It is like having a dedicated person (actor) managing a shared Google Sheet to prevent conflicts.
+/// Usage: When you need a threa-safe component and are comfortable/happy with extra async/await complexity for concurrent programming.
+
+actor SafeCar {
+    private var year: Int
+    private var make: String
+    private var color: String
+
+    init(year: Int, make: String, color: String) {
+        self.year = year
+        self.make = make
+        self.color = color
+    }
+
+    // Actor-isolated method to safely access and modify properties
+    func updateColor(to newColor: String) {
+        color = newColor
+    }
+
+    // Actor-isolated method to safely retrieve the color
+    func getColor() -> String {
+        return color
+    }
+}
+
+// Tests
+
+// Creating an instance of the SafeCar actor
+let mySafeCar = SafeCar(year: 2022, make: "Tesla", color: "Blue")
+
+// Async call to update color, ensuring thread safety
+Task {
+    await mySafeCar.updateColor(to: "Green")
+    print(await mySafeCar.getColor()) // Prints "Green"
+}
+
+// Accessing properties directly will result in a compile-time error due to actor isolation
+// Uncommenting the line below will result in a compilation error:
+//print(mySafeCar.getColor())
+
 
 
 // MARK: - Generics
@@ -62,9 +104,6 @@ print(secondStolenCar.color) // Copied car is "Black"
 
 
 // MARK: - Unwrapping Optionals
-
-
-// MARK: - ARC & Retain Cycles
 
 
 // MARK: - Concurrency & Threading
