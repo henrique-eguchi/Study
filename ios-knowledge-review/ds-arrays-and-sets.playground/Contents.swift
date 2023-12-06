@@ -104,9 +104,9 @@ swiftDevs
 // Answer: Sets provide better performance (O(1)) for lookups and mutations, making them more efficient for large collections with unique elements.
 
 // Answer:
-// - Intersection: Returns a set containing the common elements between two sets.
-// - Symmetric Difference: Returns a set with elements exclusive to each set.
-// - Union: Combines two sets, excluding duplicates.
-// - Subtract: Returns a set with elements from the first set not present in the second set.
-// - Disjoint: Checks if two sets have no common elements and returns a boolean value.
+// - Intersection: Returns a set containing the common elements between two sets. ((*))
+// - Symmetric Difference: Returns a set with elements exclusive to each set. (*()*)
+// - Union: Combines two sets, excluding duplicates. (*(*)*)
+// - Subtract: Returns a set with elements from the first set not present in the second set.(*())
+// - Disjoint: Checks if two sets have no common elements and returns a boolean value. ((!?))
 
