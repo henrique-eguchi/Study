@@ -4,7 +4,7 @@ import UIKit
 
 // Concurrency is doing multiple tasks at same time. Apple's multi-core processors allows us to do this.
 
-// Threading is like a highway with multiple lanes, each lane represent a thread while each car on that lane represent a task.
+// Threading is a fundamental approach to achieving concurrency. Threads are lightweight units of execution that enable different code to run simultaneously. Threading is like a highway with multiple lanes, each lane represent a thread while each car on that lane represent a task.
 
 // Main thread is the fastest lane and background is the slower lanes.
 
