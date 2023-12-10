@@ -12,7 +12,7 @@ import UIKit
 
 // Background thread is where heavy tasks are made
 
-// GCD - Grand Central Dispatch & NSOperationQueue
+// GCD - Grand Central Dispatch, NSOperationQueue & async await
 
 // GCD and NSOperationQueue is an API that manages threading for us so we can only deal with queues and tasks
 // It comes with 1 main thread and 4 background threads (separated by qos: quality of service - priority)
@@ -27,7 +27,6 @@ import UIKit
 // Concurrent queues
 // - Every task starts in order but each of them does not wait for other tasks to be completed
 // - The order of completion is unpredictable
-
 
 // MARK: -  Pros & Cons
 
@@ -60,6 +59,24 @@ DispatchQueue.main.async {
 DispatchQueue.global(qos: .background).async {
     // code to run in background queue
 }
+
+// Operation framework provides a higher-level approach to concurrency - it allows us to encapsulate tasks as operation objects, offering features like dependency, priority and cancellations. OperationQueue is built on top of GCD, and it manages the execution of these operations
+
+// MARK: -  Implementation
+
+let operationQueue = OperationQueue()
+
+let op1 = BlockOperation {
+    print("op1")
+}
+
+let op2 = BlockOperation {
+    print("op2")
+}
+
+op1.addDependency(op2) // op2 will execute first
+
+operationQueue.addOperations([op1, op2], waitUntilFinished: false)
 
 
 // MARK: - Conceptual Questions
