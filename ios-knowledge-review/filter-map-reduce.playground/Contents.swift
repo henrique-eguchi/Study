@@ -70,3 +70,27 @@ print(singleArray)
 
 let doubledSingleArray = arrayOfArrays.flatMap { $0.map { $0 * 2 } }
 print(doubledSingleArray)
+
+
+// MARK: - Q&A
+
+// Question: What are higher order functions, and why are they useful in Swift?
+// Answer: Higher order functions are functions that take other functions as parameters or return functions as results. They provide concise and expressive ways to perform operations on collections, offering more readable and functional code.
+
+// Question: What does the `filter` higher order function do, and how does it compare to a traditional for loop?
+// Answer: The `filter` function is used to filter elements based on a condition. It returns a new array containing only the elements that satisfy the condition. In comparison to a traditional for loop, `filter` provides a more concise and expressive syntax.
+
+// Question: How does the `map` higher order function work, and what is a common use case for it?
+// Answer: The `map` function transforms each element of a collection based on a provided closure and returns a new array with the transformed values. A common use case is extracting a specific property from objects in the collection.
+
+// Question: Explain the purpose of the `reduce` higher order function, and how is it used for aggregation?
+// Answer: The `reduce` function aggregates all values in a collection into a single result. It takes an initial value and a closure that specifies how to combine the current result with each element in the collection.
+
+// Question: What is method chaining in the context of higher order functions, and what should be considered when chaining functions?
+// Answer: Chaining involves applying multiple higher order functions one after another. While chaining can improve code readability, it's essential to balance it with maintainability and avoid overly complex one-liners.
+
+// Question: Explain the purpose of the `compactMap` higher order function, and provide an example of its use.
+// Answer: The `compactMap` function is used to filter out `nil` values from a collection of optionals. It returns a new array containing only the non-nil values.
+
+// Question: Describe the `flatMap` higher order function and provide an example of its use.
+// Answer: The `flatMap` function is used to flatten an array of arrays into a single array. It also allows applying a transformation to each element while flattening.
