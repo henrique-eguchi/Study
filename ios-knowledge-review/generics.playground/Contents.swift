@@ -37,9 +37,6 @@ let my1000RR = BMWS1000RR(motor: Motor(), wheels: 2)
 driveHome(vehicle: my911)
 driveHome(vehicle: my1000RR)
 
-// It may easily bring unnecessary complexity the code
-
-
 // This function will work as long as T conforms to Comparable
 func determineHigherValue<T: Comparable>(valueOne: T, valueTwo: T) {
     let higherValue = valueOne > valueTwo ? valueOne : valueTwo
@@ -90,7 +87,7 @@ stringArray.append("Swift")
 //let user = try await NetworkManager.shared.fetchData(for: User.self, from: url)
 
 
-// Most of the time we need future proof, that Future never comes (be careful of premature optimization) and we should avoid this
+// Most of the time that we need a future proof, that Future never comes (be careful of premature optimization) and we should avoid this
 // Generic can add unnecessary complexity to our code - only use it when it is a 'slum dunk' use case - when the code repeats often. Concrete types are way easier to read and way easier to understand
 
 
