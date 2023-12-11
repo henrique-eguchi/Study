@@ -110,3 +110,8 @@ swiftDevs
 // - Subtract: Returns a set with elements from the first set not present in the second set.(*())
 // - Disjoint: Checks if two sets have no common elements and returns a boolean value. ((!?))
 
+
+// Cheatsheet
+// Array (ordered, duplicated values, less performant - Time complexity O(n) - Linear, the larger it gets the longer it will take to lookup or mutations)
+// Set (unordered, non-duplicated values, values should conform to Hashable, Time complexity O(1) - Constant, and powerfull methods to compare set collections)
+// - Intersection - pull out overlap ((*)), Symmetric Difference - only in 1 set (*()*), Union (*(*)*), Subtract - pull out difference (*()), Disjoint - check for overlap ((!?))
