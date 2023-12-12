@@ -17,15 +17,18 @@ final class Solution {
     }
 
     public func solution(_ A : inout [Int]) -> Int {
-        let nonNegativeValues = A.compactMap { $0 > 0 ? $0 : nil }
+        let nonNegativeValues = Set(A.filter { $0 > 0 })
         if nonNegativeValues.isEmpty {
             return 1
-        } else {
-            let set = Set(nonNegativeValues)
-            var values = Set(1...100_000)
-            values.subtract(set)
-            return values.min()!
         }
+        
+        for i in 1...100_000 {
+            if !nonNegativeValues.contains(i) {
+                return i
+            }
+        }
+
+        return 1
     }
 }
 
