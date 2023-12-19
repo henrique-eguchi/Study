@@ -3,6 +3,7 @@ import UIKit
 // MARK: - Classes & Structs
 
 /// Class is `reference type` - you send a reference when it gets passed around
+/// Class has inheritance
 /// Analogy - It is like changing a shared Google Sheet with others.
 /// Usage: When you do got behavior: logic, use cases, need inheritance...
 final class Car {
@@ -28,6 +29,7 @@ print(myCar.color) // Print out "Yellow" even if you are referencing `myCar` obj
 print("-------------")
 
 /// Struct is `value type` - you copy the object when it gets passed around
+/// Struct does not have inheritance
 /// Analogy - It is like creating a copy of a sheet by downloading it and change it locally.
 /// Structs has member-wise initialization which means there's no need for having constructor since you got one for free.
 /// Usage: Aim to create structs for pure data, immutable, and no-behavior, SwiftUI views - Structs are lightweight & performant

@@ -8,7 +8,7 @@
 import UIKit
 
 /// ARC (Automatic Reference Counting), Apple's way of handling memory management of objects.
-/// It holds a count for every strong reference an object has, when it goes to 0, it got deallocated from memory. When there are two objects pointing each other with strong references, if one is removed from the memory, the other will still be there since the reference is strong which causes a memory leak.
+/// It holds a count for every strong reference an object has, when it goes to 0, it got deallocated from memory. When there are two objects pointing each other with strong references, the reference count for each object never reaches zero, which causes a memory leak, even when the objects are no longer needed.
 
 // MARK: - Code with retain cycle
 
