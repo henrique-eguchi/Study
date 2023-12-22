@@ -1,0 +1,15 @@
+Swift, like many programming languages, uses both stack and heap memory.
+
+Stack Memory
+    The stack is a region of memory that operates in a Last In, First Out (LIFO) manner. It is used for storing local variables and function call information.
+Characteristics
+    Memory is allocated and deallocated in a well-defined order as function calls are made and returned. Typically, the stack size is limited, and it is fast to allocate and deallocate memory from the stack.
+Usage
+    Local variables, function parameters, and function call information (return addresses, etc.) are stored on the stack.
+
+Heap Memory
+    The heap is a region of memory used for dynamic memory allocation. Memory on the heap is not automatically managed and must be explicitly allocated and deallocated.
+Characteristics
+    Memory allocation on the heap is more flexible but comes with the responsibility of manual memory management. The heap is typically larger than the stack, and memory can be allocated and deallocated at any time during program execution.
+Usage
+    Objects with dynamic lifetimes, such as instances of classes, structs, actors, and arrays with dynamic sizes, are often allocated on the heap.
