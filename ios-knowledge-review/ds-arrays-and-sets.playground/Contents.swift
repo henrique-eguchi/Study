@@ -2,8 +2,6 @@ import UIKit
 
 // MARK: - Arrays & Sets
 
-// Set has much better performance and some really powerful methods to compare different sets (Intersection, Symmetric Difference, Union, Subtract and Disjoint)
-
 // Both are collections
 // Arrays can have duplicated values, has the same order (ordered) and keeps it - that's why it is less performant than Sets. If you do any manipulation it has to check every item in the array - Time complexity is O(n) - linear - the larger it gets the longer it will take to do lookups or mutations
 // Usage: If the order is important or if it is a small array.
@@ -11,6 +9,7 @@ import UIKit
 var someArray = ["Hey", "my", "my", "name", "is", "Henrique"]
 
 // Sets, in the other hand, cannot have duplicated values and is unordered - every time I access it, the order is not guaranteed (probably get a different order every time the set is accessed) - Then the time complexity is O(1) - constant. So since everything is unique, the elements has to conform to Hashable - this allows to constant time lookup
+// Set has much better performance and some really powerful methods to compare different sets (Intersection, Symmetric Difference, Union, Subtract and Disjoint)
 // Usage: If you're dealing with really large arrays and you don't care about its order, it better to use Sets instead.
 
 var someSet: Set = ["Hey", "my", "my", "name", "is", "Henrique"] // results in ["Hey", "my", "name", "is", "Henrique"]
