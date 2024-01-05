@@ -1,0 +1,24 @@
+Singleton
+Guarantee that there will be only one instance of that class, created once and is globally accessible throughout your codebase.
+
+UserDefaults.standard.set(false, forKey: "isFirstUse")
+URLSession.shared.
+FileManager.default.
+
+- Is uniqueness vital? Use Singleton
+- If convenience is the only reason - DO NOT USE Singletons
+- Tricky to test Singletons and the classes that uses it
+- Use it sparingly, don't overuse
+
+Example:
+
+final class Singleton {
+    static let shared = Singleton()
+    private init() { }
+
+    func doSomething() { }
+}
+
+Usage:
+
+Singleton.shared.doSomething()
