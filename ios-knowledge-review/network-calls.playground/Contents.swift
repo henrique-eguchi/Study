@@ -1,6 +1,21 @@
 import UIKit
 
-// MARK: - Basic closure implementation
+// REST API
+// Representational State Transfer (REST) Application Programming Interface (API) conforming to REST architectural style in order to connect & communicate to RESTful web services.
+// It transfer a representation of the state of the resource - this information is delivered in one of several formats via HTTP (JSON, HTML, XLT, PYTHON, PHP or plain text).
+// JSON is the most generally popular file format because it's language agnostic, as well as readable by both humans and machines.
+// JSON - JavaScript Object Notation
+// {
+//   username: "henrique-eguchi",
+//   bio: "My bio"
+// }
+//
+// REST API is considered easier, faster and more lightweight (with increased scalablity) to use than other protocols such as SOAP (Simple Object Access Protocol) - which has specific requirements like XML messaging and built-in security and transaction that make it slower and heavier. This makes REST API perfect for IoT and mobile app development.
+
+// GitHub Open API
+// curl https://api.github.com/users/henrique-eguchi
+
+// MARK: - Basic closure network call implementation
 
 // MARK: - Domain Model
 
@@ -76,7 +91,7 @@ struct GitHubUser: Decodable {
 }
 
 
-// MARK: - Async/Await implementation
+// MARK: - Async/Await network call implementation
 
 protocol AsyncAwaitUserQueryService {
     func getUser(with username: String) async throws -> User
