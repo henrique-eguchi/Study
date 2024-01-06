@@ -147,3 +147,32 @@ let task = Task {
         print("Failure")
     }
 }
+
+
+// MARK: - RESTful APIs in Swift Q&A
+
+// Questions
+
+// Question 1: What does REST stand for, and what is the purpose of a RESTful API?
+// Question 2: Why is JSON the preferred format for data exchange in RESTful APIs?
+// Question 3: How does a RESTful API compare to other protocols like SOAP, and why is it considered preferable for mobile app development?
+// Question 4: Explain the basic structure of a REST API call using the GitHub Open API example provided.
+// Question 5: Describe the purpose of the closure-based network call implementation in the provided Swift code.
+// Question 6: What is the purpose of the `Async/Await` network call implementation in the Swift code, and how does it differ from the closure-based approach?
+// Question 7: Explain the role of the `UserQueryService` and its implementations in the Swift code.
+// Question 8: In the Swift code, how is the GitHub API response mapped to the `User` domain model?
+// Question 9: How is error handling implemented in the Swift code when making network requests?
+// Question 10: Provide an example of how to use the `UserQueryService` in the Swift code to fetch user data and print the result.
+
+// Answers
+
+// Answer 1: REST stands for Representational State Transfer. A RESTful API is designed to conform to the principles of REST architecture, transferring a representation of the state of a resource over HTTP. It allows communication with web services using various formats, with JSON being a commonly used language-agnostic choice.
+// Answer 2: JSON, or JavaScript Object Notation, is a popular and widely supported file format in RESTful APIs due to its language-agnostic nature, readability for both humans and machines, and simplicity. It facilitates easy data exchange between different systems.
+// Answer 3: RESTful APIs are considered easier, faster, and more lightweight compared to other protocols like SOAP (Simple Object Access Protocol). REST is preferred for mobile app development and IoT due to its simplicity, scalability, and efficiency in handling smaller data transfers.
+// Answer 4: A basic REST API call to the GitHub Open API involves sending an HTTP GET request to the endpoint "https://api.github.com/users/henrique-eguchi". The response contains a representation of the user's data, typically in JSON format.
+// Answer 5: The closure-based network call implementation is designed to fetch user data from the GitHub API asynchronously. It uses the URLSession to perform the network request and a closure to handle the result asynchronously, providing a callback mechanism for handling success or failure.
+// Answer 6: The `Async/Await` network call implementation is an alternative approach that leverages Swift's concurrency model. It allows writing asynchronous code in a more synchronous and readable manner using the `async` and `await` keywords. This approach simplifies error handling and improves code readability compared to the closure-based approach.
+// Answer 7: The `UserQueryService` protocol defines a contract for fetching user data, and it has two implementations: `NetworkUserQueryService` using closure-based networking and `AsyncAwaitNetworkUserQueryService` using the `Async/Await` approach. Both implementations conform to the protocol and provide a way to fetch user data from the GitHub API.
+// Answer 8: The GitHub API response is initially decoded into a `GitHubUser` struct using `Decodable`. The `GitHubUser` struct contains properties like `login`, `avatarUrl`, and `bio`. The `user` computed property in `GitHubUser` is then used to map the response to the `User` domain model.
+// Answer 9: Error handling is implemented using the `Result` type and an associated `NetworkServiceError` enum. The completion handler in both closure-based and `Async/Await` approaches returns a `Result` with either a success containing the fetched user data or a failure with a specific error from the `NetworkServiceError` enum.
+// Answer 10: The provided example demonstrates using the `Async/Await` approach to fetch user data. The `getUser` function is called with a username, and the result is obtained within an asynchronous task. The user data is then printed if the request is successful, and an error message is printed otherwise.
