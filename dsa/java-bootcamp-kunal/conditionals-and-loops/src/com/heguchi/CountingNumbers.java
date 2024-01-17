@@ -11,7 +11,7 @@ public class CountingNumbers {
             if (lastDigit == numberToCount) {
                 count++;
             }
-            num /= 10; // remove last digit
+            num /= 10; // remove last digit - same as: n = n / 10
         }
     }
 }
