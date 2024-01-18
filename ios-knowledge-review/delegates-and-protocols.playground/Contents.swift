@@ -2,11 +2,15 @@ import UIKit
 
 // MARK: - Delegates and Protocols
 
-
-/// Delegates and Protocols are like messengers that help different parts of a Swift program talk to each other. They're especially handy in iOS development for making different parts of an app work together.
-/// A protocol is like a contract that defines what methods and properties an object should have. It's a way to make sure different types of objects follow the same rules, promoting consistency in the code.
-/// A delegate, on the other hand, is an object that acts on behalf of, or in coordination with, another object. It is a way for one object to delegate certain responsibilities or tasks to another object. Delegates are crucial for achieving the Separation of Concerns principle, as they allow objects to communicate without being tightly coupled.
-/// In the delegate pattern, a delegating object (the boss) defines a protocol, and a delegate (the intern) conforms to that protocol. The delegating object then invokes methods on the delegate to notify it of specific events or to request specific actions.
+/// Delegates and Protocols are like messengers that help different parts of a Swift program talk to each other. 
+/// They're especially handy in iOS development for making different parts of an app work together.
+/// A protocol is like a contract that defines what methods and properties an object should have. 
+/// It's a way to make sure different types of objects follow the same rules, promoting consistency in the code.
+/// A delegate, on the other hand, is an object that acts on behalf of, or in coordination with, another object. 
+/// It is a way for one object to delegate certain responsibilities or tasks to another object. 
+/// Delegates are crucial for achieving the Separation of Concerns principle, as they allow objects to communicate without being tightly coupled.
+/// In the delegate pattern, a delegating object (the boss) defines a protocol, and a delegate (the intern) conforms to that protocol. 
+/// The delegating object then invokes methods on the delegate to notify it of specific events or to request specific actions.
 /// Using weak references for delegates is a common practice to prevent strong reference cycles (retain cycles), where objects reference each other strongly, leading to memory leaks.
 
 
