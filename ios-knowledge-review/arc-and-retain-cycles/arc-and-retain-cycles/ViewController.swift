@@ -146,7 +146,7 @@ final class Macbook {
 
 // MARK: - Review / Questions
 
-/// 1. What is ARC (Automatic Reference Counting) in Swift, and why is it used for memory management?
+/// 1. What is ARC in Swift, and why is it used for memory management?
 
 /// 2. Describe the concept of a retain cycle and how it can lead to memory leaks.
 
@@ -160,7 +160,7 @@ final class Macbook {
 
 /// 7. What does the `deinit` keyword represent in Swift, and when is it called?
 
-// MARK: Answers
+// MARK: - Answers
 
 /// 1. ARC is a memory management mechanism in Swift that automatically tracks and manages the references to objects.
 /// It counts the number of strong references an object has, and when the count drops to zero, the object is deallocated
@@ -182,7 +182,9 @@ final class Macbook {
 /// the reference exists. In contrast, a weak reference does not increase the reference count. If the last strong reference
 /// to an object is removed and only weak references remain, the object is deallocated, preventing retain cycles and memory leaks.
 
-/// 6. It is crucial to break retain cycles to avoid memory leaks and ensure efficient memory management. Retain cycles prevent objects from being deallocated, leading to increased memory usage over time. Breaking retain cycles can be achieved by using weak or unowned references for relationships that should not keep objects alive indefinitely.
+/// 6. It is crucial to break retain cycles to avoid memory leaks and ensure efficient memory management. 
+/// Retain cycles prevent objects from being deallocated, leading to increased memory usage over time. 
+/// Breaking retain cycles can be achieved by using weak or unowned references for relationships that should not keep objects alive indefinitely.
 
 /// 7. The `deinit` keyword is used to define a deinitializer in Swift, which is called when an object is deallocated.
 /// It provides an opportunity to perform cleanup or release any resources held by the object before it is removed from memory.
