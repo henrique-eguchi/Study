@@ -15,7 +15,7 @@ let appPortfolio = [
     IndieApp(name: "ConnectFour", monthlyPrice: 1.99, users: 34081)
 ]
 
-// MARK: -  Filter - pass a conditional and filter the
+// MARK: -  Filter - pass a conditional and filter the array
 let freeApps = appPortfolio.filter { $0.monthlyPrice == 0.00 }
 print(freeApps)
 
