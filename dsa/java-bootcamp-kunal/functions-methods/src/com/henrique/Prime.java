@@ -14,6 +14,7 @@ public class Prime {
             return false;
         }
         int c = 2;
+        // Optimized way -> sqrt checks -> c*c instead of c - preventing going through all numbers
         while (c * c <= n) {
             if (n % c == 0) {
                 return false;
